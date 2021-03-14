@@ -1,15 +1,10 @@
-import React from "react";
-import { Router } from "./router/Router";
 import "./styles.css";
-import { UserProvider } from "./provider/UserProvider";
-import { RecoilRoot } from "recoil";
 
 export default function App() {
   return (
-    <RecoilRoot>
-      <UserProvider>
-        <Router />
-      </UserProvider>
-    </RecoilRoot>
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+    </div>
   );
 }
