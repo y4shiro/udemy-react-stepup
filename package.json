@@ -2,7 +2,7 @@
   "name": "react-stepup",
   "version": "1.0.0",
   "description": "Udemy の学習進捗用リポジトリ",
-  "main": "src/index.js",
+  "main": "src/index.tsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
