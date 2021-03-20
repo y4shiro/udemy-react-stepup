@@ -1,6 +1,5 @@
-import { memo, ReactNode, VFC } from "react";
-import { Image } from "@chakra-ui/image";
-import { Box, Stack, Text } from "@chakra-ui/layout";
+import { memo, VFC } from "react";
+import { Box, Image, Stack, Text } from "@chakra-ui/react";
 
 type Props = {
   imageUrl: string;
@@ -13,7 +12,7 @@ export const UserCard: VFC<Props> = memo((props) => {
   return (
     <Box
       w="260px"
-      h="260"
+      h="260px"
       bg="white"
       borderRadius="10px"
       shadow="md"
