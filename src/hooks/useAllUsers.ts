@@ -7,7 +7,7 @@ import { useMessage } from "./useMessage";
 export const useAllUsers = () => {
   const { showMessage } = useMessage();
 
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState<Array<User>>([]);
 
   const getUsers = useCallback(() => {
@@ -15,9 +15,9 @@ export const useAllUsers = () => {
     axios
       .get<Array<User>>("https://jsonplaceholder.typicode.com/users")
       .then((res) => setUsers(res.data))
-      .catch(() => {
-        showMessage({ title: "ユーザー取得に失敗しました", status: "error" });
-      })
+      .catch(() =>
+        showMessage({ title: "ユーザー取得に失敗しました", status: "error" })
+      )
       .finally(() => setLoading(false));
   }, []);
 
